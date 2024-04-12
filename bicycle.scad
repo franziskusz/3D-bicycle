@@ -10,13 +10,13 @@ seat();
 handlebar();
 suspension();
 
-//Hinterrad
+//front wheel
 wheel();
 translate([-10,0,0])
 color("Black")
 roundedTyre();
 
-//Vorderrad
+//rear wheel
 translate([-30,0,0])
 wheel();
 translate([20,0,0])
@@ -24,7 +24,7 @@ color("Black")
 roundedTyre();
 
 
-//Module Definitions
+//module definitions
     
 // wheel
 wheelThickness = 1.2;
@@ -47,13 +47,13 @@ module wheel()
               color("Silver")
               cylinder(h=wheelThickness,r=wheelInnerradius,center=true);
     }
-  //Nabe
+  //hub
   translate([20,0,0])
     rotate([90,0,0])
       color("Silver")
       cylinder(h=wheelThickness*2, r = 1, center = true);
   
-  //Speichen
+  //spokes
   translate ([20,0,0])
     for (i = [1:36])
     {
